@@ -1,4 +1,4 @@
-﻿### A mod that makes the Dverger Circlet in the game a slightly less powerful version of the wisp. Capped to be weaker Wisp that has a range of 6.
+### A mod that makes the Dverger Circlet in the game a slightly less powerful version of the wisp. Capped to be weaker Wisp that has a range of 6.
 
 `Configurable, live updating range. Client only mod.`
 
