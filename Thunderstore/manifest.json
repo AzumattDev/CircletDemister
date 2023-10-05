@@ -1,9 +1,9 @@
 ﻿{
   "name": "Circlet_Demister",
-  "version_number": "1.0.0",
+  "version_number": "1.0.1",
   "website_url": "https://discord.gg/pdHgy6Bsng",
   "description": "A mod that makes the Dverger Circlet in the game a slightly less powerful version of the wisp. Capped to be weaker. The default Wisp has a range of 6.",
   "dependencies": [
-    "denikson-BepInExPack_Valheim-5.4.1901"
+    "denikson-BepInExPack_Valheim-5.4.2200"
   ]
 }
