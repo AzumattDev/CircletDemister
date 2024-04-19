@@ -13,7 +13,7 @@ namespace CircletDemister
     public class CircletDemisterPlugin : BaseUnityPlugin
     {
         internal const string ModName = "CircletDemister";
-        internal const string ModVersion = "1.0.1";
+        internal const string ModVersion = "1.0.2";
         internal const string Author = "Azumatt";
         private const string ModGUID = Author + "." + ModName;
         private static string ConfigFileName = ModGUID + ".cfg";
@@ -23,18 +23,14 @@ namespace CircletDemister
 
         private readonly Harmony _harmony = new(ModGUID);
 
-        public static readonly ManualLogSource CircletDemisterLogger =
-            BepInEx.Logging.Logger.CreateLogSource(ModName);
+        public static readonly ManualLogSource CircletDemisterLogger = BepInEx.Logging.Logger.CreateLogSource(ModName);
 
         internal static ParticleSystemForceField? DemisterParticleFf = null!;
         internal static ParticleSystemForceField? PlayerParticleFf = null!;
 
         public void Awake()
         {
-            DemisterMaxRange = Config.Bind("1 - General", "End Range", 3.5f,
-                new ConfigDescription(
-                    "The end range of the demister effect on the circlet. Capped to be weaker than the Mistlands Demister Orb (Wisp) that has a range of 6",
-                    new AcceptableValueRange<float>(0f, 5f)));
+            DemisterMaxRange = Config.Bind("1 - General", "End Range", 3.5f, new ConfigDescription("The end range of the demister effect on the circlet. Capped to be weaker than the Mistlands Demister Orb (Wisp) that has a range of 6", new AcceptableValueRange<float>(0f, 5f)));
             DemisterMaxRange.SettingChanged += (_, _) => UpdateDemisterRange(null!, null!);
 
             Assembly assembly = Assembly.GetExecutingAssembly();
